@@ -50,7 +50,10 @@ const config = {
     plugins: [new HtmlWebpackPlugin({
         title: 'phaser应用',
         template: path.join(__dirname, './src/index.html')
-    })]
+    })],
+    externals: {
+        Phaser: 'Phaser'
+    }
 };
 
 module.exports = config;

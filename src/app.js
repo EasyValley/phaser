@@ -1,3 +1,4 @@
 const game = require('./game');
-require('./state/boot');
+const boot = require('./state/boot');
+boot();
 game.state.start('boot');

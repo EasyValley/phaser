@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 const config = {
     entry: path.join(__dirname, './src/app.js'),
@@ -8,6 +9,7 @@ const config = {
         filename: 'app.bundle.js'
     },
     mode: "development",
+    devtool:"eval-source-map",
     module: {
         rules: [
             { test: /\.css$/, use: 'css-loader' },
@@ -49,10 +51,11 @@ const config = {
         aggregateTimeout: 300,
         poll: 1000
     },
-    plugins: [new HtmlWebpackPlugin({
-        title: 'phaser应用',
-        template: path.join(__dirname, './src/index.html')
-    })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'phaser应用',
+            template: path.join(__dirname, './src/index.html')
+        })],
     externals: {
         Phaser: 'Phaser'
     }

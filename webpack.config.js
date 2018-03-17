@@ -17,7 +17,9 @@ const config = {
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {}
+                        options: {
+                            outputPath: './img'
+                        }
                     }
                 ]
             },

@@ -15,5 +15,5 @@ function run(arr) {
     arr.reverse();
     setTimeout(() => {
         run(arr);
-    }, 100);
+    }, 1000);
 }

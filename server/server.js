@@ -8,7 +8,7 @@ function start() {
 
     app.use(router.routes())
     app.use(router.allowedMethods());
-    app.use(require('koa-static')(path.join(__dirname, '../static/')));
+    app.use(require('koa-static')(path.join(__dirname, '../dist/')));
 
     app.listen(8001, () => {
         console.log(`phaser 应用启动

@@ -8,9 +8,10 @@ function boot() {
             game.load.spritesheet('mummy', require('../img/mummy37x45.png'), 37, 45, 18);
         }
         var mg;
+        var mummy;
         this.create = function () {
             mg = game.add.image(0, 0, 'thorn');
-            let mummy = game.add.sprite(200, 260, 'mummy', 5);
+            mummy = game.add.sprite(200, 260, 'mummy', 5);
             mummy.inputEnabled = true;
             mummy.input.enableDrag();
             console.log(mummy);
@@ -21,7 +22,8 @@ function boot() {
         }
 
         this.update = function () {
-            mg.x -= 1;
+            // mg.x -= 1;
+            mummy.x += 1;
         }
 
     });

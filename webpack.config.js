@@ -9,7 +9,7 @@ const config = {
         filename: 'app.bundle.js'
     },
     mode: "development",
-    devtool:"eval-source-map",
+    devtool: "eval-source-map",
     module: {
         rules: [
             { test: /\.css$/, use: 'css-loader' },
@@ -21,6 +21,17 @@ const config = {
                         loader: 'file-loader',
                         options: {
                             outputPath: './img'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(mp3|m4a)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: './media'
                         }
                     }
                 ]
